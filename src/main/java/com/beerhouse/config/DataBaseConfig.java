@@ -50,7 +50,8 @@ public class DataBaseConfig {
 		        .withUser(username, password)
 		        .build();
 		
-		anEmbeddedMysql(config).start();
+		anEmbeddedMysql(config)
+			.start();
 	}
 }
 	

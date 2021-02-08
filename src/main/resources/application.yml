@@ -1,3 +1,26 @@
 server:
   port: 9000
   context-path: /beerhouse
+
+# MySQL Database Settings
+spring:
+  datasource: 
+    embedded:
+       mysql:
+          enable: true
+          port: 3306
+          script-locations: classpath:/sql/*.sql
+          version: v5_6_21
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: test_user
+    password:
+
+# Hibernate Settings (Debugging)
+  jpa:
+    hibernate:
+       ddl-auto: update
+    properties:
+       hibernate:
+          show_sql: false
+          format_sql: true

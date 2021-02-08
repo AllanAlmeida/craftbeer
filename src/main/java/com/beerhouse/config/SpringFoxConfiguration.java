@@ -31,7 +31,7 @@ public class SpringFoxConfiguration extends WebSecurityConfigurerAdapter {
 			.and()
 			
 			// filtra requisições de login
-			.addFilterBefore(new JWTLoginFilter("/logingraph", authenticationManager()), UsernamePasswordAuthenticationFilter.class)
+			.addFilterBefore(new JWTLoginFilter("/tokenizer", authenticationManager()), UsernamePasswordAuthenticationFilter.class)
 			
 			// filtra outras requisições para verificar a presença do JWT no header
 			.addFilterBefore(new JWTAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
