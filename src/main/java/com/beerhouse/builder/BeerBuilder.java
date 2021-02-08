@@ -6,7 +6,7 @@ public class BeerBuilder {
 	
 	Beer beer;
 	
-	BeerBuilder(){
+	public BeerBuilder(){
 		this.beer = new Beer();
 	}
 	
