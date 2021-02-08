@@ -1,0 +1,4 @@
+msg:
+  beer:
+    erro:
+      save: 'Was not possible to save beer's data'
