@@ -43,8 +43,8 @@ public class SwaggerConfiguration {
 
     private ApiInfo apiEndPointsInfo() {
 
-        return new ApiInfoBuilder().title("RADIX ROUTE API")
-                .description("Routes Control REST API")
+        return new ApiInfoBuilder().title("CRAFT BEER API")
+                .description("Endpoints enable in this API")
                 .contact(new Contact("Allan Almeida", "https://www.linkedin.com/in/allan-almeida-33014275/", "allan.almeida.cpmb@gmail.com"))
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
@@ -56,7 +56,8 @@ public class SwaggerConfiguration {
         return new ApiKey("JWT", AUTHORIZATION_HEADER, "header");
     }
 
-    private SecurityContext securityContext() {
+    @SuppressWarnings("deprecation")
+	private SecurityContext securityContext() {
         
     	return SecurityContext.builder()
             .securityReferences(defaultAuth())

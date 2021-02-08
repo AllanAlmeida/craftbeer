@@ -2,3 +2,6 @@ msg:
   beer:
     erro:
       save: Was not possible to save beer's data
+      put: Was not possible to update/create beer's data
+      patch: Was not possible to update beer's data
+      delete: Was not possible to delete beer's data

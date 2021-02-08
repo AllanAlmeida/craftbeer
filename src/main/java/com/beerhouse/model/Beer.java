@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,10 +26,20 @@ public class Beer implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "beer_id")
 	private Long id;
+	
+	@NotEmpty @NotNull(message = "Name cannot be null")
 	private String name;
+	
+	@NotEmpty @NotNull(message = "Ingredients cannot be null")
 	private String ingredients;
+	
+	@NotEmpty @NotNull(message = "AlcoholContent cannot be null")
 	private String alcoholContent;
-	private Float price;
+	
+	@NotNull(message = "Price cannot be null")
+	private Double price;
+	
+	@NotEmpty @NotNull(message = "Category cannot be null")
 	private String category;
 	
 }

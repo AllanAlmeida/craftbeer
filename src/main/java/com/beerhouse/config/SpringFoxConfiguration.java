@@ -26,7 +26,6 @@ public class SpringFoxConfiguration extends WebSecurityConfigurerAdapter {
 			.and()
 			.authorizeRequests()
 				.antMatchers("/js/**", "/*.ico", "/register", "/register/**", "/console/**", "/swagger**/**", "/webjars/**", "/v2/**", "/error**").permitAll()
-				.antMatchers("/logingraph").permitAll()
 			.anyRequest().authenticated()
 			.and()
 			

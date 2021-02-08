@@ -25,7 +25,7 @@ public class BeerBuilder {
 		return this;
 	}
 	
-	public BeerBuilder price(Float price) {
+	public BeerBuilder price(Double price) {
 		beer.setPrice(price);
 		return this;
 	}
